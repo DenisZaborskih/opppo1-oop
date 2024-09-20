@@ -11,4 +11,5 @@ export class Cartoon extends AbstractMovie {
         console.log(`Мультфильм ${this.name}, режиссёр: ${this.author}, тип анимации: ${this.creation}`);
     }
 
+
 }

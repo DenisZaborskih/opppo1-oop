@@ -21,12 +21,21 @@ export class AppComponent implements OnInit {
   http: HttpClient = inject(HttpClient);
   movies: AbstractMovie[] = [];
 
+  movieEnum: { [key: string]: CreationType } = {
+    "ComputerAnimation": CreationType.ComputerAnimation,
+    "Clay": CreationType.Clay,
+    "Doll": CreationType.Doll,
+    "Printed": CreationType.Printed
+  }
+
   movieFactory = {
     ADD: (type: string, args: any[]) => {
       switch (type) {
         case 'Serial': {
-          let temp: Serial = new Serial(args[0], args[1], args[2]);
-          this.movies.push(temp);
+          if (!isNaN(args[2])) {
+            let temp: Serial = new Serial(args[0], args[1], args[2]);
+            this.movies.push(temp);
+          }
           break;
         }
         case 'GameMovie': {
@@ -35,14 +44,16 @@ export class AppComponent implements OnInit {
           break;
         }
         case 'Cartoon': {
-          let temp = new Cartoon(args[0], args[1], args[2]);
-          this.movies.push(temp);
+          if (this.movieTypeToEnum(args[2])) {
+            let temp = new Cartoon(args[0], args[1], args[2]);
+            this.movies.push(temp);
+          }
           break;
         }
         default: break;
       }
     },
-    REM:(name : string) => {
+    REM: (name: string) => {
       this.movies = this.movies.filter((item) => item.name !== name);
     }
   }
@@ -69,7 +80,7 @@ export class AppComponent implements OnInit {
           break;
         }
         case 'PRINT': {
-          for(let movie in this.movies){
+          for (let movie in this.movies) {
             this.movies[movie].print();
           }
           console.log('=======================================')
@@ -78,6 +89,10 @@ export class AppComponent implements OnInit {
         default: break;
       }
     }
+  }
+
+  movieTypeToEnum(type: string): CreationType | undefined {
+    return this.movieEnum[type as keyof typeof this.movieEnum];
   }
 
 }
