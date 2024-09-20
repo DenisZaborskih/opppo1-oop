@@ -1,0 +1,11 @@
+ADD Cartoon Clay-Adventure Alice-Smith Clay
+ADD GameMovie Epic-Quest John-Doe Fantasy-World
+ADD Serial Mystery-Chronicles Jane-Doe 45
+ADD Cartoon Space-Explorers Bob-Johnson Clay
+REM Space-Explorers
+PRINT
+ADD GameMovie Battle-Legends Sarah-Connor Action-Game
+ADD Serial Time-Travelers Lisa-Miller 30
+REM Mystery-Chronicles
+REM GameMovie Epic-Quest
+PRINT
