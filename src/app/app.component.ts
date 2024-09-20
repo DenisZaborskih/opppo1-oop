@@ -6,7 +6,6 @@ import { CreationType } from './classes/cartoon';
 import { Serial } from './classes/serial';
 import { GameMovie } from './classes/game-movie';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
-import { bootstrapApplication } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
