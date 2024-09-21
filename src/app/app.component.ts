@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     ADD: (type: string, args: any[]) => {
       switch (type) {
         case 'Serial': {
-          if (!isNaN(args[2])) {
+          if (!isNaN(args[2]) && args[2] > 0) {
             let temp: Serial = new Serial(args[0], args[1], args[2]);
             this.movies.push(temp);
           }

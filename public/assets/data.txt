@@ -6,8 +6,16 @@ ADD Cartoon Space-Explorers Bob-Johnson Clay
 REM Space-Explorers
 PRINT
 ADD GameMovie Battle-Legends Sarah-Connor Action-Game
-ADD Serial Time-Travelers Lisa-Miller 30
+ADD Serial Deterenes Kaz-Miller 30
+ADD Kino Once-upon-a-time Kaz-Miller 30
 REM Mystery-Chronicles
 ADD Serial String Name Another-String
+ADD Serial String Name 90
 REM GameMovie Epic-Quest
+REG wrong wrong worng worng
+PRINT
+REM Clay-Adventure
+PRINT
+
+ADD Serial -seril Name -90
 PRINT
