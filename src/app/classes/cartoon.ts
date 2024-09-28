@@ -1,6 +1,6 @@
 import { AbstractMovie } from "./abstract-movie";
 
-export enum CreationType { ComputerAnimation = '3D-графика', Printed = 'Рисованный', Doll = 'Кукольный', Clay = 'Плстилиновый' };
+export enum CreationType { ComputerAnimation = '3D-графика', Printed = 'Рисованный', Doll = 'Кукольный', Clay = 'Пластилиновый' };
 
 export class Cartoon extends AbstractMovie {
     constructor(public name: string, public author: string, public creation: CreationType) {

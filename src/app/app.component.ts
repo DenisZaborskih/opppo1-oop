@@ -5,7 +5,7 @@ import { Cartoon } from './classes/cartoon';
 import { CreationType } from './classes/cartoon';
 import { Serial } from './classes/serial';
 import { GameMovie } from './classes/game-movie';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
